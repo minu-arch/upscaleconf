@@ -81,7 +81,7 @@ const Faq = () => {
 
   return (
     <div className="section bg-hero py-12">
-      <div className="container mx-auto s:px-4 md:px-10 lg:w-3/4 py-28">
+      <div className="container mx-auto px-2 md:px-10 lg:w-3/4 py-28">
         <div className="flex flex-wrap">
           <div className="w-full xl:w-9/12">
             <h1 className="text-5xl lg:text-7xl font-bold uppercase text-beige tracking-tighter mb-8">

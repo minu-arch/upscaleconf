@@ -3,7 +3,7 @@ import React from 'react';
 const Tickets = () => {
   return (
     <div className="section bg-beige py-12">
-      <div className="container mx-auto s:px-4 md:px-10 lg:w-3/4 py-28">
+      <div className="container mx-auto px-2 md:px-10 lg:w-3/4 py-28">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 ">
           <div className="flex flex-col lg:w-1/3 mb-8 lg:mb-0">
             <h1 className="text-5xl lg:text-7xl font-bold uppercase text-semidark tracking-tighter">

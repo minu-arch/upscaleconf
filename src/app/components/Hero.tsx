@@ -9,7 +9,7 @@ const Hero = () => {
 
   return (
     <main className="relative section bg-hero  flex justify-center  pt-12 min-h-screen ">
-      <div className="container mx-auto flex flex-wrap justify-center s:px-4 md:px-10 lg:w-3/4 z-10">
+      <div className="container mx-auto flex flex-wrap justify-center px-2 md:px-10 lg:w-3/4 z-10">
         <div className="w-full lg:w-1/3 mt-8 ">
           <h1 className="text-6xl text-beige font-semibold uppercase tracking-tighter leading-10 flex flex-wrap">
             <span className="block">What to&nbsp;</span>

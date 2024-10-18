@@ -6,7 +6,7 @@ import { LogoGray } from '../svg/SvgIcons';
 const Footer = () => {
   return (
     <footer className="bg-bgfooter text-beige py-12">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-2">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12">
           <div className="hidden lg:block">
             <LogoGray className="size-24" color="#efdfcc" />

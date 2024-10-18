@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        s: '220px',
+        s: '360px',
         xs: '420px',
       },
       fontSize: {
