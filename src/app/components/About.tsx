@@ -15,15 +15,12 @@ const About = () => {
         const { top, bottom } = containerRef.current.getBoundingClientRect();
         const windowHeight = window.innerHeight;
 
-        // Calculăm procentul de scroll în cadrul secțiunii
         const scrollPercentage =
           (windowHeight - top) / (bottom - top + windowHeight);
 
-        // Calculăm distanța totală pe care caruselul trebuie să o parcurgă
         const totalDistance =
           carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
 
-        // Aplicăm transformarea, multiplicăm cu 2 pentru o mișcare mai amplă
         const moveAmount =
           Math.max(0, Math.min(1, scrollPercentage)) * totalDistance * 2;
         carouselRef.current.style.transform = `translateX(-${moveAmount}px)`;
