@@ -7,7 +7,7 @@ import Button from './components/Button';
 
 const About = () => {
   return (
-    <div className=" bg-black">
+    <div className=" bg-black overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-7xl">
         <div className="flex flex-col gap-12">
           <div className="flex justify-between mb-12 sm:flex-row flex-col gap-6">
@@ -21,6 +21,7 @@ const About = () => {
             best of Spain. With sunny beaches and incredible food, Málaga is the
             perfect spot to enjoy some downtime.
           </p>
+          div
           <HorizontalScrollCarousel />
         </div>
       </div>
@@ -36,8 +37,8 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ['1%', '-95%']);
 
   return (
-    <section ref={targetRef} className="relative h-[200vh]">
-      <div className="sticky top-0 flex h-screen items-start ">
+    <section ref={targetRef} className="relative mb-32">
+      <div className="sticky top-0 flex items-start">
         <motion.div style={{ x }} className="flex gap-4">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
