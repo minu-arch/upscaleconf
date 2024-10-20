@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import AboutPerson from './components/AboutPerson';
 
@@ -216,7 +216,30 @@ const Speakers = () => {
       },
     },
   ];
+  const handleOpenAboutPerson = (speaker: Speaker) => {
+    setSelectedSpeaker(speaker);
+    setIsAboutPersonOpen(true);
+  };
 
+  const handleCloseAboutPerson = () => {
+    setIsAboutPersonOpen(false);
+    // Setăm selectedSpeaker la null după ce animația de închidere s-a terminat
+    setTimeout(() => setSelectedSpeaker(null), 300);
+  };
+
+  useEffect(() => {
+    const handleEscKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        handleCloseAboutPerson();
+      }
+    };
+
+    document.addEventListener('keydown', handleEscKey);
+
+    return () => {
+      document.removeEventListener('keydown', handleEscKey);
+    };
+  }, []);
   const commonImageClasses = 'w-auto max-h-[15px] m-[10px]';
 
   return (
@@ -304,7 +327,7 @@ const Speakers = () => {
             <div key={speaker.id} className="w-full md:w-1/2 lg:w-1/3 mb-4">
               <div
                 className="cursor-pointer flex gap-4 group"
-                onClick={() => setSelectedSpeaker(speaker)}
+                onClick={() => handleOpenAboutPerson(speaker)}
               >
                 <div className="shrink-0">
                   <Image
@@ -334,8 +357,8 @@ const Speakers = () => {
       {selectedSpeaker && (
         <AboutPerson
           speaker={selectedSpeaker}
-          onClose={() => setSelectedSpeaker(null)}
-          isOpen={true}
+          onClose={handleCloseAboutPerson}
+          isOpen={isAboutPersonOpen}
         />
       )}
     </div>
