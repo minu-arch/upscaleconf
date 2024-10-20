@@ -4,6 +4,11 @@ import React from 'react';
 
 import { ClouseSvg } from '../../svg/SvgIcons';
 
+interface Link {
+  label: string;
+  url: string;
+}
+
 interface Speaker {
   id: number;
   name: string;
@@ -11,12 +16,7 @@ interface Speaker {
   company: string;
   image: string;
   bio: string;
-  links: {
-    linkedin?: string;
-    twitter?: string;
-    website?: string;
-    customLink?: string;
-  };
+  links: Link[];
 }
 
 interface AboutPersonProps {
@@ -69,47 +69,17 @@ const AboutPerson: React.FC<AboutPersonProps> = ({
               </p>
               <p className="mb-4 text-sm">{speaker.bio}</p>
               <div className="flex gap-4">
-                {speaker.links.linkedin && (
+                {speaker.links.map((link) => (
                   <a
-                    href={speaker.links.linkedin}
+                    key={link.label}
+                    href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-herotext text-sm"
+                    className="text-herotext text-sm uppercase tracking-tighter"
                   >
-                    LinkedIn
+                    {link.label}
                   </a>
-                )}
-                {speaker.links.twitter && (
-                  <a
-                    href={speaker.links.twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-herotext text-sm"
-                  >
-                    Twitter
-                  </a>
-                )}
-                {speaker.links.customLink ? (
-                  <a
-                    href={speaker.links.customLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-herotext text-sm"
-                  >
-                    GitHub
-                  </a>
-                ) : (
-                  speaker.links.website && (
-                    <a
-                      href={speaker.links.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-herotext text-sm"
-                    >
-                      Website
-                    </a>
-                  )
-                )}
+                ))}
               </div>
             </div>
           </motion.div>
