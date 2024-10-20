@@ -21,7 +21,6 @@ const About = () => {
             best of Spain. With sunny beaches and incredible food, Málaga is the
             perfect spot to enjoy some downtime.
           </p>
-          div
           <HorizontalScrollCarousel />
         </div>
       </div>

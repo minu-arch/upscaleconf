@@ -145,3 +145,22 @@ export function CiviTai(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+export function ClouseSvg(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      width="30"
+      height="30"
+      viewBox="0 0 30 30"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M10 3.75L20.1213 14.9937L10 26.24L12.7875 28.75L25.1662 14.9937L12.7875 1.24L10 3.75Z"
+        fill="#EFDFCC"
+      />
+    </svg>
+  );
+}
