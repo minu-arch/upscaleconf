@@ -15,6 +15,7 @@ interface Speaker {
     linkedin?: string;
     twitter?: string;
     website?: string;
+    customLink?: string;
   };
 }
 
@@ -88,15 +89,26 @@ const AboutPerson: React.FC<AboutPersonProps> = ({
                     Twitter
                   </a>
                 )}
-                {speaker.links.website && (
+                {speaker.links.customLink ? (
                   <a
-                    href={speaker.links.website}
+                    href={speaker.links.customLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-herotext text-sm"
                   >
-                    Website
+                    GitHub
                   </a>
+                ) : (
+                  speaker.links.website && (
+                    <a
+                      href={speaker.links.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-herotext text-sm"
+                    >
+                      Website
+                    </a>
+                  )
                 )}
               </div>
             </div>

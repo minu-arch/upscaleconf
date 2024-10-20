@@ -17,6 +17,7 @@ interface Speaker {
     linkedin?: string;
     twitter?: string;
     website?: string;
+    customLink?: string;
   };
 }
 
@@ -213,6 +214,7 @@ const Speakers = () => {
       bio: 'David Jensenius is a media artist, composer, software engineer, and trouble maker living in Kitchener, Ontario, Canada. In addition to his art practice, David works at GitHub on Copilot.',
       links: {
         website: 'https://secretlevel.com/',
+        customLink: 'https://github.com/davidjensenius',
       },
     },
   ];
