@@ -48,7 +48,7 @@ const AboutPerson: React.FC<AboutPersonProps> = ({
           >
             <button
               onClick={onClose}
-              className="absolute top-4 left-4 text-beige"
+              className="absolute top-4 left-5 text-beige"
             >
               <ClouseSvg />
             </button>

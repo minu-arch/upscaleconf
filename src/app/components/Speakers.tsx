@@ -223,7 +223,7 @@ const Speakers = () => {
 
   const handleCloseAboutPerson = () => {
     setIsAboutPersonOpen(false);
-    // Setăm selectedSpeaker la null după ce animația de închidere s-a terminat
+
     setTimeout(() => setSelectedSpeaker(null), 300);
   };
 
