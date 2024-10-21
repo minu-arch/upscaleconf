@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import ClientLoader from '@/app/components/components/ClientLoader';
+import { ReactNode } from 'react';
 
 import './globals.css';
 
@@ -14,14 +16,12 @@ export const metadata: Metadata = {
   description: 'UpscaleConf',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${IBMPlexMono.variable}`}>{children}</body>
+      <body className={`${IBMPlexMono.variable}`}>
+        <ClientLoader>{children}</ClientLoader>
+      </body>
     </html>
   );
 }
