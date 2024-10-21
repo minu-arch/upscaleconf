@@ -134,7 +134,7 @@ const Speakers = () => {
           url: 'https://www.linkedin.com/in/elizabethlaraki/',
         },
         { label: 'Twitter', url: 'https://twitter.com/elizabethlaraki' },
-        { label: 'Website', url: 'https://electriccapital.com/' },
+        { label: 'R/GA', url: 'https://rga.com/' },
       ],
     },
     {
@@ -238,14 +238,7 @@ const Speakers = () => {
       company: 'Copilot',
       image: '/david.jpg',
       bio: 'David Jensenius is a media artist, composer, software engineer, and trouble maker living in Kitchener, Ontario, Canada. In addition to his art practice, David works at GitHub on Copilot.',
-      links: [
-        {
-          label: 'LinkedIn',
-          url: 'https://www.linkedin.com/in/elizabethlaraki/',
-        },
-        { label: 'Twitter', url: 'https://twitter.com/elizabethlaraki' },
-        { label: 'GitHub', url: 'https://github.com/davidjensenius' },
-      ],
+      links: [{ label: 'GitHub', url: 'https://github.com/davidjensenius' }],
     },
   ];
   const handleOpenAboutPerson = (speaker: Speaker) => {
@@ -275,14 +268,14 @@ const Speakers = () => {
   const commonImageClasses = 'w-auto max-h-[15px] m-[10px]';
 
   return (
-    <div className="section bg-hero relative">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-7xl">
-        <div className="flex flex-col items-start justify-center ">
-          <h1 className="uppercase tracking-tighter text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-beige">
+    <div className="section relative bg-hero">
+      <div className="container mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-start justify-center">
+          <h1 className="text-4xl font-bold uppercase tracking-tighter text-beige sm:text-5xl md:text-6xl lg:text-7xl">
             Speakers
           </h1>
         </div>
-        <div className="flex flex-wrap justify-between mt-10">
+        <div className="mt-10 flex max-w-5xl flex-wrap justify-between">
           <Image
             src="/1.png"
             width={100}
@@ -354,11 +347,11 @@ const Speakers = () => {
             className={commonImageClasses}
           />
         </div>
-        <div className="flex flex-wrap mt-10 mx-auto w-full">
+        <div className="mx-auto mt-10 flex w-full flex-wrap">
           {speakers.map((speaker) => (
-            <div key={speaker.id} className="w-full md:w-1/2 lg:w-1/3 mb-4">
+            <div key={speaker.id} className="mb-4 w-full md:w-1/2 lg:w-1/3">
               <div
-                className="cursor-pointer flex gap-4 group"
+                className="group flex cursor-pointer gap-4"
                 onClick={() => handleOpenAboutPerson(speaker)}
               >
                 <div className="shrink-0">
@@ -367,10 +360,10 @@ const Speakers = () => {
                     width={101}
                     height={101}
                     alt={speaker.name}
-                    className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-300"
+                    className="object-cover object-top grayscale transition-all duration-300 group-hover:grayscale-0"
                   />
                 </div>
-                <div className="flex flex-col text-beige group-hover:text-herotext transition-all duration-300">
+                <div className="flex flex-col text-beige transition-all duration-300 group-hover:text-herotext">
                   <h1 className="mb-2 text-xl font-bold uppercase tracking-tighter">
                     {speaker.name}
                   </h1>

@@ -43,25 +43,25 @@ const FaqItem: React.FC<FaqItem & { isOpen: boolean; toggle: () => void }> = ({
 }) => {
   return (
     <div className="py-4">
-      <button className="flex items-center w-full text-left" onClick={toggle}>
+      <button className="flex w-full items-center text-left" onClick={toggle}>
         <span
-          className={`text-beige text-2xl mr-4 transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-180' : ''}`}
+          className={`mr-4 text-2xl text-beige transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-180' : ''}`}
         >
           +
         </span>
-        <span className="text-xl font-semibold text-beige uppercase tracking-tighter">
+        <span className="text-xl font-semibold uppercase tracking-tighter text-beige">
           {question}
         </span>
       </button>
       <div
-        className={`mt-2 text-beige pl-10 overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+        className={`mt-2 overflow-hidden pl-10 text-beige transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
       >
         {answer}
         {question === 'Is there a refund policy for tickets?' && (
           <div className="mt-2">
             <Link
               href="/ticketing-policy"
-              className=" hover:cursor-pointer hover:text-herotext"
+              className="hover:cursor-pointer hover:text-herotext"
             >
               Check our ticketing policy.
             </Link>
@@ -81,10 +81,10 @@ const Faq = () => {
 
   return (
     <div className="section bg-hero py-12">
-      <div className="container mx-auto px-2 md:px-10 lg:w-3/4 py-28">
+      <div className="container mx-auto px-2 py-28 md:px-10 lg:w-3/4">
         <div className="flex flex-wrap">
           <div className="w-full xl:w-9/12">
-            <h1 className="text-5xl lg:text-7xl font-bold uppercase text-beige tracking-tighter mb-8">
+            <h1 className="mb-8 text-5xl font-bold uppercase tracking-tighter text-beige lg:text-7xl">
               FAQ
             </h1>
             <div className="space-y-4">

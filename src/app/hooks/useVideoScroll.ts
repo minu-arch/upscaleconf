@@ -1,19 +1,31 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-export function useVideoScroll() {
+interface VideoScrollProps {
+  progress: number;
+}
+
+export function useVideoScrollProgress(): [
+  React.RefObject<HTMLVideoElement>,
+  VideoScrollProps,
+] {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [progress, setProgress] = useState(0);
+
+  const SCROLL_START = 50;
+  const SCROLL_DISTANCE = 1300;
 
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const videoHeight = video.offsetHeight;
-      const scrollPercentage = Math.min(scrollPosition / videoHeight, 1);
+      const scrollY = window.scrollY;
+      const newProgress = Math.min(
+        Math.max((scrollY - SCROLL_START) / SCROLL_DISTANCE, 0),
+        1
+      );
+      setProgress(newProgress);
 
-      if (video.duration) {
-        video.currentTime = video.duration * scrollPercentage;
+      const video = videoRef.current;
+      if (video && video.duration) {
+        video.currentTime = video.duration * newProgress;
       }
     };
 
@@ -21,5 +33,5 @@ export function useVideoScroll() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  return videoRef;
+  return [videoRef, { progress }];
 }

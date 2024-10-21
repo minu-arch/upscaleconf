@@ -38,18 +38,18 @@ const AboutPerson: React.FC<AboutPersonProps> = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 bg-black/50 flex items-center justify-end z-50"
+          className="fixed inset-0 z-50 flex items-center justify-end bg-black/50"
         >
           <motion.div
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-            className="bg-black text-beige size-full max-w-md overflow-y-auto p-8 relative"
+            className="relative size-full max-w-md overflow-y-auto bg-black p-8 text-beige"
           >
             <button
               onClick={onClose}
-              className="absolute top-4 left-5 text-beige"
+              className="absolute left-5 top-4 text-beige"
             >
               <ClouseSvg />
             </button>
@@ -61,7 +61,7 @@ const AboutPerson: React.FC<AboutPersonProps> = ({
                 alt={speaker.name}
                 className="mb-4 object-cover"
               />
-              <h2 className="text-xl font-bold mb-2 uppercase tracking-tighter">
+              <h2 className="mb-2 text-xl font-bold uppercase tracking-tighter">
                 {speaker.name}
               </h2>
               <p className="text-md mb-4 uppercase tracking-tighter">
@@ -75,7 +75,7 @@ const AboutPerson: React.FC<AboutPersonProps> = ({
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-herotext text-sm uppercase tracking-tighter"
+                    className="text-sm uppercase tracking-tighter text-beige underline hover:text-herotext hover:no-underline"
                   >
                     {link.label}
                   </a>

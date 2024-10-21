@@ -7,16 +7,16 @@ import Button from './components/Button';
 
 const About = () => {
   return (
-    <div className=" bg-black overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-7xl">
+    <div className="overflow-hidden bg-black">
+      <div className="container mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-12">
-          <div className="flex justify-between mb-12 sm:flex-row flex-col gap-6">
-            <h1 className="uppercase whitespace-pre-line tracking-tighter text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-beige">
+          <div className="mb-12 flex flex-col justify-between gap-6 sm:flex-row">
+            <h1 className="whitespace-pre-line text-4xl font-bold uppercase tracking-tighter text-beige sm:text-5xl md:text-6xl lg:text-7xl">
               See you in{'\n'}sunny Malaga
             </h1>
-            <Button className="text-6xl w-fit">Early bird tickets</Button>
+            <Button className="w-fit text-6xl">Early bird tickets</Button>
           </div>
-          <p className="text-beige text-2xl uppercase ">
+          <p className="text-2xl uppercase text-beige">
             Explore the world of creative AI and, as a bonus, experience the
             best of Spain. With sunny beaches and incredible food, Málaga is the
             perfect spot to enjoy some downtime.

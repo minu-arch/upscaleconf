@@ -36,4 +36,5 @@ const config: Config = {
   },
   plugins: [containerQueries],
 };
+
 export default config;

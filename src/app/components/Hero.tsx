@@ -8,21 +8,21 @@ const Hero = () => {
   const commonClasses = 'font-bold text-lg uppercase';
 
   return (
-    <main className="relative section bg-hero  flex justify-center  pt-12 min-h-screen ">
-      <div className="container mx-auto flex flex-wrap justify-center px-2 md:px-10 lg:w-3/4 z-10">
-        <div className="w-full lg:w-1/3 mt-8 ">
-          <h1 className="text-6xl text-beige font-semibold uppercase tracking-tighter leading-10 flex flex-wrap">
+    <main className="section relative flex min-h-screen justify-center bg-hero pt-12">
+      <div className="container z-10 mx-auto flex flex-wrap justify-center px-2 md:px-10 lg:w-3/4">
+        <div className="mt-8 w-full lg:w-1/3">
+          <h1 className="flex flex-wrap text-6xl font-semibold uppercase leading-10 tracking-tighter text-beige">
             <span className="block">What to&nbsp;</span>
             <span className="block">expect</span>
           </h1>
-          <h2 className="text-2xl font-normal uppercase text-herotext tracking-tighter leading-10 flex flex-wrap mt-2">
+          <h2 className="mt-2 flex flex-wrap text-2xl font-normal uppercase leading-10 tracking-tighter text-herotext">
             <span className="block">Agenda coming&nbsp;</span>
             <span className="block">soon</span>
           </h2>
         </div>
-        <div className="w-full lg:w-2/3 mt-8 text-beige">
+        <div className="mt-8 w-full text-beige lg:w-2/3">
           <div className="flex flex-wrap justify-between">
-            <div className="flex flex-col ">
+            <div className="flex flex-col">
               <h2 className="text-4xl uppercase">tue</h2>
               <h2 className="text-4xl uppercase">nov 19</h2>
               <p className="text-2xl">9 am - 6 pm</p>
@@ -34,12 +34,12 @@ const Hero = () => {
             </div>
           </div>
           <div className="mt-12">
-            <h1 className="text-5xl uppercase font-bold">
+            <h1 className="text-5xl font-bold uppercase">
               The core experience
             </h1>
-            <p className="font-bold text-lg uppercase">
+            <p className="text-lg font-bold uppercase">
               Hosted by{' '}
-              <span className="hover:text-herotext hover:cursor-pointer">
+              <span className="hover:cursor-pointer hover:text-herotext">
                 Linus Ekenstam
               </span>
             </p>
@@ -55,7 +55,7 @@ const Hero = () => {
             </p>
           </div>
           <div className="mt-12">
-            <h1 className="text-5xl uppercase font-bold">Enjoyables</h1>
+            <h1 className="text-5xl font-bold uppercase">Enjoyables</h1>
             <p className={commonClasses}>
               Welcome swag bag with useful and inspiring goodies{' '}
             </p>
@@ -75,7 +75,7 @@ const Hero = () => {
           </Button>
         </div>
       </div>
-      <div className="absolute left-0 bottom-0 w-1/4 s:w-2/4 lg:w-2/3 xl:w-3/4 max-w-md z-0">
+      <div className="absolute bottom-0 left-0 z-0 w-1/4 max-w-md s:w-2/4 lg:w-2/3 xl:w-3/4">
         <Image
           src="/whattoexpect.png"
           alt="Descriere imagine"
