@@ -11,9 +11,11 @@ const Loader = () => {
           height: 20px;
         }
       `}</style>
-      <h1 className="uppercase text-beige">upscaling content</h1>
-      <p className="font-bold uppercase text-textfooter">
-        Please wait ... (It`s worth it)
+      <h1 className="text-xl font-bold uppercase text-beige">
+        upscaling content
+      </h1>
+      <p className="whitespace-pre-line font-bold uppercase text-textfooter">
+        Please wait ...{'\n'}(It`s worth it)
       </p>
     </div>
   );
