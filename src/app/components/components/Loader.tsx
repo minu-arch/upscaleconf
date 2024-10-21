@@ -4,13 +4,7 @@ import { LogoGray } from '@/app/svg/SvgIcons';
 const Loader = () => {
   return (
     <div className="flex h-screen flex-col items-center justify-center gap-2 bg-hero text-white">
-      <LogoGray className="loader size-5 animate-spin" />
-      <style jsx>{`
-        .loader {
-          width: 20px;
-          height: 20px;
-        }
-      `}</style>
+      <LogoGray className="size-5 animate-spin" />
       <h1 className="text-xl font-bold uppercase text-beige">
         upscaling content
       </h1>
