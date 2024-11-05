@@ -13,6 +13,10 @@ const config: Config = {
         s: '360px',
         xs: '420px',
       },
+      container: {
+        center: true,
+        padding: '1rem',
+      },
       fontSize: {
         'responsive-sm': 'clamp(1rem, 3vw, 1.5rem)',
         'responsive-md': 'clamp(1.5rem, 4vw, 4rem)',

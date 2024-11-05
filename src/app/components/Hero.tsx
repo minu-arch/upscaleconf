@@ -11,7 +11,7 @@ const Hero = () => {
     <main className="section relative flex min-h-screen justify-center bg-hero pt-12">
       <div className="container z-10 mx-auto flex flex-wrap justify-center px-2 md:px-10 lg:w-3/4">
         <div className="mt-8 w-full lg:w-1/3">
-          <h1 className="flex flex-wrap text-6xl font-semibold uppercase leading-10 tracking-tighter text-beige">
+          <h1 className="flex flex-wrap text-6xl font-semibold uppercase leading-[2.8rem] tracking-tighter text-beige">
             <span className="block">What to&nbsp;</span>
             <span className="block">expect</span>
           </h1>

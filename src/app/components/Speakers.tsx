@@ -268,14 +268,14 @@ const Speakers = () => {
   const commonImageClasses = 'w-auto max-h-[15px] m-[10px]';
 
   return (
-    <div className="section relative bg-hero">
-      <div className="container mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <div className="relative w-full bg-hero">
+      <div className="container w-full px-2 py-28 md:px-10 lg:w-3/4">
         <div className="flex flex-col items-start justify-center">
           <h1 className="text-4xl font-bold uppercase tracking-tighter text-beige sm:text-5xl md:text-6xl lg:text-7xl">
             Speakers
           </h1>
         </div>
-        <div className="mt-10 flex max-w-5xl flex-wrap justify-between">
+        <div className="mt-10 flex w-full max-w-5xl flex-wrap justify-between">
           <Image
             src="/1.png"
             width={100}
